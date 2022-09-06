@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+
 *,
 **,
 ::after,
@@ -5,15 +8,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-
-.x{
-    background-color:    hsl(0, 36%, 70%)
-    - hsl(0, 93%, 68%), hsl(0, 6%, 24%)
-    
-    hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
-    hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
 }
 
 
@@ -56,10 +50,6 @@ div{
     display: block;
 }
 
-/* .grid .wrapper-logo img{
-    margin: 2em;
-    width: 8em;
-} */
 
 .grid .wrapper-logo {
     margin: 2.5em 0;
@@ -127,15 +117,24 @@ div{
     color: hsl(0, 6%, 24%);
     font-weight: 400;
     width: 85.5%;
-    /* height: 70%; */
 }
 
-.grid .wrapper-texte .error {
-    display: none;
+.grid .wrapper-texte .text-error {
+    /* display: none; */
+    margin: 0;
+    margin-top: 0.5rem !important;
+    margin-left: 1rem;
+    text-align: left;
+    color: rgb(236, 20, 20) !important;
+      
 }
 
-.grid .wrapper-texte .error-img {
+.grid .wrapper-texte .icon-error {
     display: none;
+    position: absolute;
+    top: 50%;
+    right: 8rem;
+    transform: translateY(-50%);
 }
 
 .grid .wrapper-texte form button {
@@ -164,8 +163,6 @@ div{
 
 @media screen and (min-width : 800px ){
     body {
-        /* background: url(../images/bg-pattern-desktop.svg) left top / auto 100% no-repeat,  
-        border-box hsl(0, 100%, 98%); */
         background-image: url("./images/bg-pattern-desktop.svg") ; 
         background-color: hsl(0, 100%, 98%);
     }
@@ -225,17 +222,27 @@ div{
 
     .grid .wrapper-texte form button:hover {
         cursor: pointer;
-        opacity: 70%;
+        background: hsl(0deg 61% 88%);
     }
 
-    .grid .wrapper-texte .error-img.active {
+    .grid .wrapper-texte .icon-error.active {
         right: 11em;
         top: 1.5em;
     }
 }
 
-/* @media screen and (min-width : 600px ){
+@media screen and (min-width : 900px ){
     .grid .wrapper-texte form button {
         margin-right: -0.5em;
     }
-} */
+
+    .grid .wrapper-hero picture img{
+        width: 0%;
+    }
+}
+
+@media screen and (min-width : 600px ){
+    .grid .wrapper-texte form button {
+        margin-right: -0.5em;
+    }
+}
