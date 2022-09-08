@@ -4,14 +4,14 @@
 *,
 **,
 ::after,
-::before{
+::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 
-body{
+body {
     /* display: flex;
     flex-direction: column; */
     letter-spacing: 0.2px;
@@ -19,34 +19,34 @@ body{
     word-spacing: 0.8px;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 15px;
-    margin: 0px ;
+    margin: 0px;
     min-height: 100vh;
 }
 
-.texte-hidden{
+.texte-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
     overflow: hidden;
 }
 
-.grid{
+.grid {
     margin: 0 auto;
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
 }
 
-.container{
+.container {
     flex: 1;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
 }
 
-div{
+div {
     display: block;
 }
 
@@ -61,19 +61,19 @@ div{
     display: block;
 }
 
-.grid .wrapper-hero picture img{
+.grid .wrapper-hero picture img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.grid .wrapper-texte{
+.grid .wrapper-texte {
     background: border-box hsl(0, 100%, 98%);
     padding: 2.5em 3em 5em;
     /* margin: 30px; */
 }
 
-.grid .wrapper-texte  h2{
+.grid .wrapper-texte h2 {
     text-align: center;
     text-transform: uppercase;
     font-size: 2.2rem;
@@ -81,19 +81,19 @@ div{
     line-height: 1.1;
 }
 
-.grid .wrapper-texte h2 span:first-child{
-  font-weight: 300;
-  color: hsl(0, 36%, 70%);
-  /* font-size: 3em; */
+.grid .wrapper-texte h2 span:first-child {
+    font-weight: 300;
+    color: hsl(0, 36%, 70%);
+    /* font-size: 3em; */
 }
 
 
-.grid .wrapper-texte h2 span:last-child{
+.grid .wrapper-texte h2 span:last-child {
     font-weight: 600;
     color: hsl(0, 6%, 24%);
 }
 
-.grid .wrapper-texte > p{
+.grid .wrapper-texte>p {
     text-align: center;
     font-size: 1rem;
     font-weight: 400;
@@ -108,17 +108,18 @@ div{
     flex: 1;
     margin: 0;
     position: relative;
+
 }
 
 .grid .wrapper-texte form input {
-    padding: 1.2em 1.5em;
+    padding: 1.2em 0em 1.2em 1.5em;
     border-radius: 50px;
     background-color: transparent;
     border: 1px solid hsl(0, 36%, 70%);
     outline: none;
     color: hsl(0, 6%, 24%);
     font-weight: 400;
-    width: 85.5%;
+    width: 95%;
 }
 
 .grid .wrapper-texte .text-error {
@@ -128,7 +129,7 @@ div{
     margin-left: 1rem;
     text-align: left;
     color: rgb(236, 20, 20) !important;
-      
+
 }
 
 .grid .wrapper-texte .icon-error {
@@ -140,11 +141,12 @@ div{
 }
 
 .grid .wrapper-texte form button {
-    width: 5.3em;
-    height: 3.6em;
+    width: 7em;
+    height: 3.7em;
     text-align: center;
     border: 0;
     padding: 0;
+    z-index: 2;
     background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%) 20%);
     border-radius: 50px;
     box-shadow: 0 6px 13px hsl(0deg 36% 70% / 50%);
@@ -163,13 +165,13 @@ div{
     color: hsl(228, 45%, 44%);
 }
 
-@media screen and (min-width : 800px ){
+@media screen and (min-width : 800px) {
     body {
-        background-image: url("./images/bg-pattern-desktop.svg") ; 
+        background-image: url("./images/bg-pattern-desktop.svg");
         background-color: hsl(0, 100%, 98%);
     }
 
-    .grid{
+    .grid {
         display: grid;
         max-width: initial;
         grid-template-areas:
@@ -177,27 +179,27 @@ div{
             ". texte padding hero";
         grid-template-columns: auto 33% 15% 42%;
         grid-template-rows: min-content 1fr;
-        
+
     }
 
-    .grid .wrapper-logo{
+    .grid .wrapper-logo {
         grid-area: logo;
         margin: 6.5em 0;
         padding: 0;
     }
 
-    .grid .wrapper-logo img{
+    .grid .wrapper-logo img {
         width: initial;
-    } 
+    }
 
-    .grid .wrapper-hero{
+    .grid .wrapper-hero {
         grid-area: hero;
     }
 
-    .grid .wrapper-texte{
+    .grid .wrapper-texte {
         grid-area: texte;
         padding: 0;
-        
+
     }
 
     .grid .wrapper-texte h2 {
@@ -205,12 +207,12 @@ div{
         text-align: initial;
     }
 
-    .grid .wrapper-texte > p{
+    .grid .wrapper-texte>p {
         text-align: initial;
     }
 
     .grid .wrapper-texte form input {
-        padding: 1.4em;
+        padding: 1.4em 0.9em;
         width: 91%;
     }
 
@@ -220,9 +222,9 @@ div{
         padding: 1.4em;
         right: -9px;
     }
-        /* Button Active */
+    /* Button Active */
 
-    .grid .wrapper-texte form button:hover {
+     .grid .wrapper-texte form button:hover {
         cursor: pointer;
         background: hsl(0deg 61% 88%);
     }
@@ -233,43 +235,73 @@ div{
     }
 }
 
-@media screen and (min-width : 1440px ){
+/* @media screen and (min-width : 1440px ){
     .grid .wrapper-texte form button {
         right: 10px !important;
     }
-}
+} */
 
-@media screen and (min-width : 900px ){
+/* @media screen and (min-width : 900px ){
     .grid .wrapper-texte form button {
         margin-right: -0.5em;
     }
 
-    /* .grid .wrapper-hero picture img{
+    .grid .wrapper-hero picture img{
         width: 0%;
-    } */
-}
+    }
+} */
 
-@media screen and (min-width : 768px ){
+/* @media screen and (min-width : 768px ){
+    .grid .wrapper-texte form input {
+        padding: 1.2em 2em !important;
+        width: 91.5% !important;
+    }
     .grid .wrapper-texte form button {
         right: 3px !important;
+        width: 7em;
     }
-}
+} */
 
-@media screen and (min-width : 600px ){
+/* @media screen and (min-width : 600px ){
     .grid .wrapper-texte form button {
         margin-right: -0.5em;
     }
+} */
+
+@media screen and (max-width : 1024px) {
+
+    .form-group button{
+        right: -7px !important;
+    }
 }
 
-@media screen and (min-width : 320px ){
-    .grid .wrapper-texte form input {
-        padding: 1.2em 2em;
-        width: 76.5%
+@media screen and (max-width : 425px) {
+
+    .form-group button{
+        width: 5.5rem !important;
+        right: -5px !important;
     }
-    
-    .grid .wrapper-texte form button {
-        right: -0.2em;
-    }
-    
 }
 
+@media screen and (max-width : 400px) {
+
+    .form-group button{
+        width: 5.5rem !important;
+        right: -6px !important;
+    }
+}
+
+@media screen and (max-width : 375px) {
+
+    .form-group button{
+        width: 5.5rem !important;
+        right: -7px !important;
+    }
+}
+
+@media screen and (max-width : 320px) {
+
+    .form-group button{
+        right: -10px !important;
+    }
+}
